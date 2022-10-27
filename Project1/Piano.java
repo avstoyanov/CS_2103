@@ -79,24 +79,75 @@ public class Piano extends JPanel {
 	 * add them to the _keys array.
 	 */
 	private void makeKeys () {
-		// Just as an example, this draws the left-most black key at its proper position.
-		int[] xCoords = new int[] {
-			WHITE_KEY_WIDTH - BLACK_KEY_WIDTH/2,
-			WHITE_KEY_WIDTH + BLACK_KEY_WIDTH/2,
-			WHITE_KEY_WIDTH + BLACK_KEY_WIDTH/2,
-			WHITE_KEY_WIDTH - BLACK_KEY_WIDTH/2
-		};
-		int[] yCoords = new int[] {
-			0,
-			0,
-			BLACK_KEY_HEIGHT,
-			BLACK_KEY_HEIGHT
-		};
-		Polygon polygon = new Polygon(xCoords, yCoords, xCoords.length);
-		Key key = new Key(polygon, START_PITCH, this);
+		int bk1 = - BLACK_KEY_WIDTH/2;
+		int bk2 = BLACK_KEY_WIDTH/2;
+		int wk1 = 0;
+		int wk2 = WHITE_KEY_WIDTH;
+		int whiteKeyHeight = WHITE_KEY_HEIGHT - 1; //fixes display issue where bottom of key not outlined
 
-		// Add this key to the list of keys so that it gets painted.
+
+		int[] XCoords = new int[] {
+				wk1,
+				wk2,
+				wk2,
+				wk1
+		};
+		int[] YCoords = new int[] {
+				0,
+				0,
+				whiteKeyHeight,
+				whiteKeyHeight
+		};
+
+		Polygon polygon = new Polygon(XCoords, YCoords, XCoords.length);
+		Key key = new Key(polygon, START_PITCH, this, Color.WHITE);
 		_keys.add(key);
+
+		for(int i=0; i < NUM_WHITE_KEYS; i++){
+
+			wk1 += WHITE_KEY_WIDTH;
+			wk2 += WHITE_KEY_WIDTH;
+
+			XCoords = new int[] {
+				wk1,
+				wk2,
+				wk2,
+				wk1
+			};
+		    YCoords = new int[] {
+			    0,
+				0,
+				whiteKeyHeight,
+				whiteKeyHeight
+			};
+
+			polygon = new Polygon(XCoords, YCoords, XCoords.length);
+			key = new Key(polygon, START_PITCH, this, Color.WHITE);
+			_keys.add(key);
+
+			XCoords = new int[] {
+				bk1,
+				bk2,
+				bk2,
+				bk1
+		    };
+		    YCoords = new int[] {
+			    0,
+				0,
+				BLACK_KEY_HEIGHT,
+				BLACK_KEY_HEIGHT
+			};
+
+			polygon = new Polygon(XCoords, YCoords, XCoords.length);
+			key = new Key(polygon, START_PITCH, this, Color.BLACK);
+
+			if(!(i % NUM_WHITE_KEYS_PER_OCTAVE == 3 || i % NUM_WHITE_KEYS_PER_OCTAVE == 0)){
+				_keys.add(key);
+			}
+
+			bk1 += WHITE_KEY_WIDTH;
+			bk2 += WHITE_KEY_WIDTH;
+		}
 	}
 
 	// DO NOT MODIFY THIS METHOD.

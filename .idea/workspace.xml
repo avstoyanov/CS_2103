@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="starter code">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/Band.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/ControlPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/NetworkReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/Piano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/PianoMouseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/PianoTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/TestReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/_PianoKeyboardAnnotated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project1/_Project1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS_2103.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS_2103.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/Piano.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Piano.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +30,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -56,7 +47,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+    "settings.editor.selected.configurable": "preferences.updates"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -64,7 +55,7 @@
       <recent name="$PROJECT_DIR$/Project1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PianoTester.testDragWithinKey">
+  <component name="RunManager" selected="Application.Band">
     <configuration name="Band" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Band" />
       <module name="CS_2103" />
@@ -94,9 +85,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Band" />
         <item itemvalue="JUnit.PianoTester.testDragWithinKey" />
         <item itemvalue="JUnit.PianoTester.testClickUpperLeftMostPixel" />
-        <item itemvalue="Application.Band" />
       </list>
     </recent_temporary>
   </component>
@@ -123,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666676365794</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="starter code">
+      <created>1666831310553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666831310553</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
