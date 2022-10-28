@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="whole keyboard rendered">
+    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="optimized keyboard generation, implemented pitch logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/Piano.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Piano.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666892001660</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="optimized keyboard generation, implemented pitch logic">
+      <created>1666937797719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666937797719</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +177,8 @@
     <MESSAGE value="initial project setup" />
     <MESSAGE value="starter code" />
     <MESSAGE value="whole keyboard rendered" />
-    <option name="LAST_COMMIT_MESSAGE" value="whole keyboard rendered" />
+    <MESSAGE value="optimized keyboard generation, implemented pitch logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized keyboard generation, implemented pitch logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
