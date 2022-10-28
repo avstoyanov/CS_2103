@@ -83,7 +83,6 @@ public class Key {
 		// and different key states (pressed down or not).
 		g.setColor(_keyColor);
 		g.fillPolygon(_polygon);
-		g.drawPolygon(_polygon);
 		g.setColor(Color.BLACK);
 		g.drawPolygon(_polygon);
 	}

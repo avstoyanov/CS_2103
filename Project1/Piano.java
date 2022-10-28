@@ -79,75 +79,35 @@ public class Piano extends JPanel {
 	 * add them to the _keys array.
 	 */
 	private void makeKeys () {
-		int bk1 = - BLACK_KEY_WIDTH/2;
-		int bk2 = BLACK_KEY_WIDTH/2;
-		int wk1 = 0;
-		int wk2 = WHITE_KEY_WIDTH;
-		int whiteKeyHeight = WHITE_KEY_HEIGHT - 1; //fixes display issue where bottom of key not outlined
+		int bKeyOffset = BLACK_KEY_WIDTH/2;
+		int whiteKeyHeight = WHITE_KEY_HEIGHT; //fixes display issue where bottom of key not outlined
+		int currentPitch = START_PITCH;
 
+		addKey(0, WHITE_KEY_WIDTH, whiteKeyHeight, currentPitch);
 
-		int[] XCoords = new int[] {
-				wk1,
-				wk2,
-				wk2,
-				wk1
-		};
-		int[] YCoords = new int[] {
-				0,
-				0,
-				whiteKeyHeight,
-				whiteKeyHeight
-		};
+		for(int i=1; i < NUM_WHITE_KEYS; i++){
+			int xWhite = WHITE_KEY_WIDTH*i;
 
-		Polygon polygon = new Polygon(XCoords, YCoords, XCoords.length);
-		Key key = new Key(polygon, START_PITCH, this, Color.WHITE);
-		_keys.add(key);
+			currentPitch ++;
+			addKey(xWhite, xWhite+WHITE_KEY_WIDTH, whiteKeyHeight, currentPitch);
 
-		for(int i=0; i < NUM_WHITE_KEYS; i++){
-
-			wk1 += WHITE_KEY_WIDTH;
-			wk2 += WHITE_KEY_WIDTH;
-
-			XCoords = new int[] {
-				wk1,
-				wk2,
-				wk2,
-				wk1
-			};
-		    YCoords = new int[] {
-			    0,
-				0,
-				whiteKeyHeight,
-				whiteKeyHeight
-			};
-
-			polygon = new Polygon(XCoords, YCoords, XCoords.length);
-			key = new Key(polygon, START_PITCH, this, Color.WHITE);
-			_keys.add(key);
-
-			XCoords = new int[] {
-				bk1,
-				bk2,
-				bk2,
-				bk1
-		    };
-		    YCoords = new int[] {
-			    0,
-				0,
-				BLACK_KEY_HEIGHT,
-				BLACK_KEY_HEIGHT
-			};
-
-			polygon = new Polygon(XCoords, YCoords, XCoords.length);
-			key = new Key(polygon, START_PITCH, this, Color.BLACK);
-
+			currentPitch++;
 			if(!(i % NUM_WHITE_KEYS_PER_OCTAVE == 3 || i % NUM_WHITE_KEYS_PER_OCTAVE == 0)){
-				_keys.add(key);
+				addKey(xWhite-bKeyOffset, xWhite+bKeyOffset, BLACK_KEY_HEIGHT, currentPitch);
 			}
-
-			bk1 += WHITE_KEY_WIDTH;
-			bk2 += WHITE_KEY_WIDTH;
 		}
+	}
+
+	/**
+	 * adds the key with the specified x coords, height, and pitch to the _keys array
+	 * @param x1 top left x coordinate
+	 * @param x2 top right x coordinate
+	 * @param height height of key, also determines color of the key
+	 * @param pitch
+	 */
+	private void addKey(int x1, int x2, int height, int pitch){
+		Polygon polygon = new Polygon(new int[]{x1, x2, x2, x1}, new int[]{0, 0, height, height}, 4);
+		_keys.add(new Key(polygon, pitch, this, (height == BLACK_KEY_HEIGHT ? Color.BLACK : Color.WHITE)));
 	}
 
 	// DO NOT MODIFY THIS METHOD.
