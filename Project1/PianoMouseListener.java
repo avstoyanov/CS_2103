@@ -26,7 +26,7 @@ public class PianoMouseListener extends MouseAdapter {
 	 */
 	private Key currentKey(int x, int y){
 		int k = x/Piano.WHITE_KEY_WIDTH * 2;
-		System.out.println(k + " " + _keys.get(k).get_pitch());
+
 		if(y < Piano.BLACK_KEY_HEIGHT){
 			if(k > 0 && _keys.get(k+1).getPolygon().contains(x, y)){
 				return _keys.get(k+1);
@@ -46,7 +46,7 @@ public class PianoMouseListener extends MouseAdapter {
 	 */
 	public void mouseDragged (MouseEvent e) {
 		if( e.getY() >= 0 && e.getY() < Piano.HEIGHT && e.getX() >= 0 && e.getX() < Piano.WIDTH &&
-				!curKey.getPolygon().contains(e.getX(), e.getY())){
+				!(curKey == currentKey(e.getX(), e.getY()))){
 			curKey.play(false);
 			mousePressed(e);
 		}
