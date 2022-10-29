@@ -11,6 +11,7 @@ public class PianoMouseListener extends MouseAdapter {
 	private List<Key> _keys;
 	private Key curKey;
 
+
 	/**
 	 * @param keys the list of keys in the piano.
 	 */
@@ -45,6 +46,9 @@ public class PianoMouseListener extends MouseAdapter {
 	 * of the entire piano, of where the mouse is currently located.
 	 */
 	public void mouseDragged (MouseEvent e) {
+		if(curKey == null){ //patch to a funky test case that discovered a potentially impossible bug
+			mousePressed(e);
+		}
 		if( e.getY() >= 0 && e.getY() < Piano.HEIGHT && e.getX() >= 0 && e.getX() < Piano.WIDTH &&
 				!(curKey == currentKey(e.getX(), e.getY()))){
 			curKey.play(false);

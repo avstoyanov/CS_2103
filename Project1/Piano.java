@@ -24,6 +24,9 @@ public class Piano extends JPanel {
 	private Receiver _receiver;
 	private PianoMouseListener _mouseListener;
 
+	//Ghost key: Halloween special!! It makes all the math conveniently work and makes the program more efficient.
+	public Key NULL_KEY = new Key(new Polygon(new int[]{}, new int[]{}, 0), 0, this, Color.WHITE);
+
 	/**
 	 * Returns the list of keys in the piano.
 	 * @return the list of keys.
@@ -81,12 +84,11 @@ public class Piano extends JPanel {
 	private void makeKeys () {
 		int bKeyOffset = BLACK_KEY_WIDTH/2;
 		int currentPitch = START_PITCH;
+		int xWhite = 0;
 
-		addKey(0, 0 + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, currentPitch);
-		_keys.add(new Key(new Polygon(new int[]{}, new int[]{}, 0),
-						0, this, Color.WHITE));//ghost key in celebration of Halloween (makes math work)
+		addWhiteKey(xWhite, currentPitch);
 		for(int i=1; i < NUM_WHITE_KEYS; i++){
-			int xWhite = WHITE_KEY_WIDTH*i;
+			xWhite = WHITE_KEY_WIDTH*i;
 
 			currentPitch++;
 
@@ -97,11 +99,15 @@ public class Piano extends JPanel {
 						BLACK_KEY_HEIGHT, currentPitch);
 				currentPitch++;
 			} else{
-				addKey(xWhite, xWhite + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, currentPitch);
-				_keys.add(new Key(new Polygon(new int[]{}, new int[]{}, 0),
-						0, this, Color.WHITE));//ghost key in celebration of Halloween (makes math work)
+				addWhiteKey(xWhite, currentPitch);
 			}
 		}
+	}
+
+
+	private void addWhiteKey(int x, int pitch){
+		addKey(x, x + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, pitch);
+		_keys.add(NULL_KEY);
 	}
 
 	/**
