@@ -15,19 +15,9 @@ public class Key {
 	private Piano _piano;
 	private Color _keyColor;
 
-
-/*	*//**
-	 * Returns the color of the key.
-	 * @return _keyColor
-	 *//*
-	public Color getKeyColor(){return _keyColor;}
-
-	*//**
-	 * Sets the color of the key.
-	 * @param c the color of the key.
-	 *//*
-	public void setKeyColor(Color c){_keyColor = c;}*/
-
+	public int get_pitch(){
+		return _pitch;
+	}
 	/**
 	 * Returns the polygon associated with this key.
 	 * @return the polygon associated with this key.
@@ -81,8 +71,13 @@ public class Key {
 	public void paint (Graphics g) {
 		// TODO: Change this to handle the different key colors
 		// and different key states (pressed down or not).
-		g.setColor(_keyColor);
-		g.fillPolygon(_polygon);
+		if(_isOn){
+			g.setColor(Color.GRAY);
+			g.fillPolygon(_polygon);
+		} else{
+			g.setColor(_keyColor);
+			g.fillPolygon(_polygon);
+		}
 		g.setColor(Color.BLACK);
 		g.drawPolygon(_polygon);
 	}

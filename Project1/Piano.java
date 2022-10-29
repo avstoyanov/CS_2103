@@ -80,20 +80,26 @@ public class Piano extends JPanel {
 	 */
 	private void makeKeys () {
 		int bKeyOffset = BLACK_KEY_WIDTH/2;
-		int whiteKeyHeight = WHITE_KEY_HEIGHT; //fixes display issue where bottom of key not outlined
 		int currentPitch = START_PITCH;
 
-		addKey(0, WHITE_KEY_WIDTH, whiteKeyHeight, currentPitch);
-
+		addKey(0, 0 + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, currentPitch);
+		_keys.add(new Key(new Polygon(new int[]{}, new int[]{}, 0),
+						0, this, Color.WHITE));//ghost key in celebration of Halloween (makes math work)
 		for(int i=1; i < NUM_WHITE_KEYS; i++){
 			int xWhite = WHITE_KEY_WIDTH*i;
 
-			currentPitch ++;
-			addKey(xWhite, xWhite+WHITE_KEY_WIDTH, whiteKeyHeight, currentPitch);
-
 			currentPitch++;
+
 			if(!(i % NUM_WHITE_KEYS_PER_OCTAVE == 3 || i % NUM_WHITE_KEYS_PER_OCTAVE == 0)){
-				addKey(xWhite-bKeyOffset, xWhite+bKeyOffset, BLACK_KEY_HEIGHT, currentPitch);
+				addKey(xWhite, xWhite + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, currentPitch+1);
+				addKey(xWhite - bKeyOffset,
+						xWhite + bKeyOffset,
+						BLACK_KEY_HEIGHT, currentPitch);
+				currentPitch++;
+			} else{
+				addKey(xWhite, xWhite + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, currentPitch);
+				_keys.add(new Key(new Polygon(new int[]{}, new int[]{}, 0),
+						0, this, Color.WHITE));//ghost key in celebration of Halloween (makes math work)
 			}
 		}
 	}
@@ -106,7 +112,9 @@ public class Piano extends JPanel {
 	 * @param pitch
 	 */
 	private void addKey(int x1, int x2, int height, int pitch){
-		Polygon polygon = new Polygon(new int[]{x1, x2, x2, x1}, new int[]{0, 0, height, height}, 4);
+		Polygon polygon = new Polygon(new int[]{x1, x2, x2, x1},
+									  new int[]{0, 0, height, height},
+							  4);
 		_keys.add(new Key(polygon, pitch, this, (height == BLACK_KEY_HEIGHT ? Color.BLACK : Color.WHITE)));
 	}
 
