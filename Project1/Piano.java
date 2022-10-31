@@ -25,7 +25,7 @@ public class Piano extends JPanel {
 	private PianoMouseListener _mouseListener;
 
 	//Ghost key: Halloween special!! It makes all the math conveniently work and makes the program more efficient.
-	public Key NULL_KEY = new Key(new Polygon(new int[]{}, new int[]{}, 0), 0, this, Color.WHITE);
+	public Key NULL_KEY = new Key();
 
 	/**
 	 * Returns the list of keys in the piano.

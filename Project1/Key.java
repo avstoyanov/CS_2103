@@ -15,9 +15,6 @@ public class Key {
 	private Piano _piano;
 	private Color _keyColor;
 
-	public int get_pitch(){
-		return _pitch;
-	}
 	/**
 	 * Returns the polygon associated with this key.
 	 * @return the polygon associated with this key.
@@ -38,6 +35,16 @@ public class Key {
 		_pitch = pitch;
 		_piano = piano;
 		_keyColor = c;
+	}
+
+	/**
+	 * enables the initialization of a key without any value, which helps pad the array of keys so that the
+	 * black and white keys are in mathematically predictable locations. This makes it so no loops are necessary when
+	 * testing for which key the mouse is clicking on, which increases the efficiency significantly.
+	 */
+	public Key (){
+		_isOn = false;
+		_polygon = new Polygon();
 	}
 
 	// DO NOT MODIFY THIS METHOD.
@@ -69,8 +76,6 @@ public class Key {
 	 * @param g the Graphics object to be used for painting.
 	 */
 	public void paint (Graphics g) {
-		// TODO: Change this to handle the different key colors
-		// and different key states (pressed down or not).
 		if(_isOn){
 			g.setColor(Color.GRAY);
 			g.fillPolygon(_polygon);

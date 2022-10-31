@@ -20,7 +20,11 @@ public class PianoMouseListener extends MouseAdapter {
 	}
 
 	/**
-	 * determines the key the mouse is on based on the x and y coordinates, assuming they lie within the keyboard
+	 * determines which key the mouse is on based on the x and y coordinates,
+	 * assuming that white keys are on even indexes and black keys are in odd indexes.
+	 * The array stores the keys as: White key, blank key or black key BEFORE it, then the next white key and so on.
+	 * Two adjacent white keys have a blank key between them, and black keys are drawn after white keys
+	 * so that they can overlay the white keys to simplify key generation logic.
 	 * @param x coordinate of mouse
 	 * @param y coordinate of mouse
 	 * @return key
@@ -29,16 +33,15 @@ public class PianoMouseListener extends MouseAdapter {
 		int k = x/Piano.WHITE_KEY_WIDTH * 2;
 
 		if(y < Piano.BLACK_KEY_HEIGHT){
-			if(k > 0 && _keys.get(k+1).getPolygon().contains(x, y)){
-				return _keys.get(k+1);
+			if(k > 0 && _keys.get(k+1).getPolygon().contains(x, y)) {
+				return _keys.get(k+1); // left black key
 			}
 			if(k < _keys.size() - 2 && _keys.get(k+3).getPolygon().contains(x, y)){
-				return _keys.get(k+3);
+				return _keys.get(k+3); // right black key
 			}
 		}
 		return _keys.get(k);
 	}
-	// TODO implement this method.
 	@Override
 	/**
 	 * This method is called by Swing whenever the user drags the mouse.
@@ -68,8 +71,10 @@ public class PianoMouseListener extends MouseAdapter {
 		//	if (key.getPolygon().contains(e.getX(), e.getY())) {
 		// To turn a key "on", you could then write:
 		//      key.play(true);  // Note that the key should eventually be turned off
-		curKey = currentKey(e.getX(), e.getY());
-		curKey.play(true);
+		if(e.getY() >= 0 && e.getY() < Piano.HEIGHT && e.getX() >= 0 && e.getX() < Piano.WIDTH) {
+			curKey = currentKey(e.getX(), e.getY());
+			curKey.play(true);
+		}
 	}
 
 	// TODO implement this method.
