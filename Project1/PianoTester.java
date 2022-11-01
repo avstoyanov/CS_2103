@@ -75,6 +75,4 @@ class PianoTester {
 		_mouseListener.mousePressed(makeMouseEvent(0, Piano.HEIGHT));
 		assertFalse(_receiver.isKeyOn(48));
 	}
-	// TODO write at least 3 more tests!
-	// ...
 }

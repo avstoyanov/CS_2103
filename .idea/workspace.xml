@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="needs 3 more test cases">
+    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="finished all project 1 requirements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/Piano.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Piano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project1/PianoMouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/PianoMouseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project1/PianoTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/PianoTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +53,14 @@
       <recent name="$PROJECT_DIR$/Project1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PianoTester.testBottomEdge">
+  <component name="RunManager" selected="Application.Band">
+    <configuration name="Band" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Band" />
+      <module name="CS_2103" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PianoTester.testBlackKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS_2103" />
       <option name="PACKAGE_NAME" value="" />
@@ -72,16 +76,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PianoTester" />
       <option name="METHOD_NAME" value="testBottomEdge" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PianoTester.testDragOutsideKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS_2103" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PianoTester" />
-      <option name="METHOD_NAME" value="testDragOutsideKey" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Band" />
         <item itemvalue="JUnit.PianoTester.testBottomEdge" />
         <item itemvalue="JUnit.PianoTester.testRightEdge" />
         <item itemvalue="JUnit.PianoTester.testBlackKey" />
         <item itemvalue="JUnit.PianoTester.testKeyVertex" />
-        <item itemvalue="JUnit.PianoTester.testDragOutsideKey" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667024486684</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="finished all project 1 requirements">
+      <created>1667256411749</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667256411749</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +245,8 @@
     <MESSAGE value="almost everything in project 1 works, need to fix bug with dragging onto black keys" />
     <MESSAGE value="all done except test cases" />
     <MESSAGE value="needs 3 more test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="needs 3 more test cases" />
+    <MESSAGE value="finished all project 1 requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all project 1 requirements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
