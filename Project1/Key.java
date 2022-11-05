@@ -15,6 +15,11 @@ public class Key {
 	private Piano _piano;
 	private Color _keyColor;
 
+	//checks the state of the key and returns true if the state of the key is on
+	public boolean getState(){
+		return _isOn;
+	}
+
 	/**
 	 * Returns the polygon associated with this key.
 	 * @return the polygon associated with this key.
@@ -40,7 +45,7 @@ public class Key {
 	/**
 	 * enables the initialization of a key without any value, which helps pad the array of keys so that the
 	 * black and white keys are in mathematically predictable locations. This makes it so no loops are necessary when
-	 * testing for which key the mouse is clicking on, which increases the efficiency significantly.
+	 * testing for which key the mouse is clicking on, which increases the efficiency of the program significantly.
 	 */
 	public Key (){
 		_isOn = false;
@@ -70,7 +75,6 @@ public class Key {
 		}
 	}
 
-	// TODO implement this method.
 	/**
 	 * Paints the key using the specified Swing Graphics object.
 	 * @param g the Graphics object to be used for painting.

@@ -76,17 +76,18 @@ public class Piano extends JPanel {
 		return _mouseListener;
 	}
 
-	// TODO: implement this method. You should create and use several helper methods to do so.
 	/**
 	 * Instantiate all the Key objects with their correct polygons and pitches, and
-	 * add them to the _keys array.
+	 * add them to the _keys array. Making all polygons be the same was more efficient for both memory
+	 * and keyboard creation, so all keys are rectangles with black keys overlayed on the white keys.
+	 * Can be easily done using 3 different kinds of white keys but that requires much more redundant code.
 	 */
 	private void makeKeys () {
 		int bKeyOffset = BLACK_KEY_WIDTH/2;
 		int currentPitch = START_PITCH;
 		int xWhite = 0;
 
-		addWhiteKey(xWhite, currentPitch);
+		addAdjacentWhiteKey(xWhite, currentPitch);
 		for(int i=1; i < NUM_WHITE_KEYS; i++){
 			xWhite = WHITE_KEY_WIDTH*i;
 
@@ -99,13 +100,13 @@ public class Piano extends JPanel {
 						BLACK_KEY_HEIGHT, currentPitch);
 				currentPitch++;
 			} else{
-				addWhiteKey(xWhite, currentPitch);
+				addAdjacentWhiteKey(xWhite, currentPitch);
 			}
 		}
 	}
 
-
-	private void addWhiteKey(int x, int pitch){
+	//Adds a white key with an empty key to the key ArrayList, reduces repeating code
+	private void addAdjacentWhiteKey(int x, int pitch){
 		addKey(x, x + WHITE_KEY_WIDTH, WHITE_KEY_HEIGHT, pitch);
 		_keys.add(NULL_KEY);
 	}

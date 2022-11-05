@@ -9,7 +9,7 @@ import java.util.*;
 public class PianoMouseListener extends MouseAdapter {
 	// You are free to add more instance variables if you wish.
 	private List<Key> _keys;
-	private Key curKey;
+	private Key curKey = new Key(); //initializing in order to not have to test if it's null
 
 
 	/**
@@ -49,35 +49,40 @@ public class PianoMouseListener extends MouseAdapter {
 	 * of the entire piano, of where the mouse is currently located.
 	 */
 	public void mouseDragged (MouseEvent e) {
-		if(curKey == null){ //patch to a funky test case that discovered a potentially impossible bug
-			mousePressed(e);
-		}
 		if( e.getY() >= 0 && e.getY() < Piano.HEIGHT && e.getX() >= 0 && e.getX() < Piano.WIDTH &&
-				!(curKey == currentKey(e.getX(), e.getY()))){
-			curKey.play(false);
+				!(currentKey(e.getX(), e.getY())).getState()){
+			turnOffKey(curKey);
 			mousePressed(e);
 		}
 	}
 
-	// TODO implement this method.
+
 	@Override
 	/**
 	 * This method is called by Swing whenever the user presses the mouse.
 	 * @param e the MouseEvent containing the (x,y) location, relative to the upper-left-hand corner
 	 * of the entire piano, of where the mouse is currently located.
+	 *          if a new key is pressed while a key is already pressed, the old key will be released
+	 *          and the new key will be pressed. If the same key is pressed twice without releasing,
+	 *          the second press will be ignored.
 	 */
 	public void mousePressed (MouseEvent e) {
 		// To test whether a certain key received the mouse event, you could write something like:
 		//	if (key.getPolygon().contains(e.getX(), e.getY())) {
 		// To turn a key "on", you could then write:
 		//      key.play(true);  // Note that the key should eventually be turned off
+
 		if(e.getY() >= 0 && e.getY() < Piano.HEIGHT && e.getX() >= 0 && e.getX() < Piano.WIDTH) {
-			curKey = currentKey(e.getX(), e.getY());
-			curKey.play(true);
+			Key tempKey = currentKey(e.getX(), e.getY());
+			if(!tempKey.getState()) {
+				turnOffKey(curKey);
+				curKey = tempKey;
+				curKey.play(true);
+			}
 		}
 	}
 
-	// TODO implement this method.
+
 	@Override
 	/**
 	 * This method is called by Swing whenever the user releases the mouse.
@@ -85,6 +90,11 @@ public class PianoMouseListener extends MouseAdapter {
 	 * of the entire piano, of where the mouse is currently located.
 	 */
 	public void mouseReleased (MouseEvent e) {
-		curKey.play(false);
+		turnOffKey(curKey);
+	}
+
+	//sets the state of the key to off(false)
+	private void turnOffKey(Key k){
+		if(k.getState()) k.play(false);
 	}
 }

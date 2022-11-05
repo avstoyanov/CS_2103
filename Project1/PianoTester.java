@@ -34,11 +34,41 @@ class PianoTester {
 	}
 
 	@Test
+	void testKeyVertex () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH, Piano.BLACK_KEY_HEIGHT));
+		assertTrue(_receiver.isKeyOn(50));
+	}
+
+	@Test
+	void testWhiteMiddleKeyLeftEdge () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH + Piano.BLACK_KEY_WIDTH/2, 0));
+		assertTrue(_receiver.isKeyOn(50));
+	}
+
+	@Test
+	void testBlackKeyLeftEdge () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH - Piano.BLACK_KEY_WIDTH/2, 0));
+		assertTrue(_receiver.isKeyOn(49));
+	}
+
+	@Test
+	void testWhiteRightKeyLeftEdge () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH*2 + Piano.BLACK_KEY_WIDTH/2, 0));
+		assertTrue(_receiver.isKeyOn(52));
+	}
+
+	@Test
+	void testWhiteLeftKeyLowerRightEdge () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH, Piano.BLACK_KEY_HEIGHT + 1));
+		assertTrue(_receiver.isKeyOn(50));
+	}
+
+	@Test
 	void testDragWithinKey () {
 		// Test that pressing and dragging the mouse *within* the same key
 		// should cause the key to be turned on only once, not multiple times.
 		// Use makeMouseEvent and TestReceiver.getKeyOnCount.
-		// TODO complete me
+
 		_mouseListener.mousePressed(makeMouseEvent(0, 0));
 		_mouseListener.mouseDragged(makeMouseEvent(10,140));
 		assertEquals(_receiver.getKeyOnCount(48),1);
@@ -53,18 +83,6 @@ class PianoTester {
 	}
 
 	@Test
-	void testKeyVertex () {
-		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH, Piano.BLACK_KEY_HEIGHT));
-		assertTrue(_receiver.isKeyOn(50));
-	}
-
-	@Test
-	void testBlackKey () {
-		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH + Piano.BLACK_KEY_WIDTH/2, 0));
-		assertTrue(_receiver.isKeyOn(50));
-	}
-
-	@Test
 	void testRightEdge () {
 		_mouseListener.mousePressed(makeMouseEvent(Piano.WIDTH, 0));
 		assertFalse(_receiver.isKeyOn(83));
@@ -75,4 +93,63 @@ class PianoTester {
 		_mouseListener.mousePressed(makeMouseEvent(0, Piano.HEIGHT));
 		assertFalse(_receiver.isKeyOn(48));
 	}
+
+	@Test
+	void testRepeatedOn () {
+		_mouseListener.mousePressed(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		_mouseListener.mousePressed(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		assertEquals(1, _receiver.getKeyOnCount(48));
+	}
+
+	@Test
+	void testNoPressOff () {
+		_mouseListener.mouseReleased(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		_mouseListener.mouseReleased(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		assertEquals(0, _receiver.getKeyOnCount(48));
+	}
+
+	@Test
+	void testMultipleOff () {
+		_mouseListener.mousePressed(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		_mouseListener.mouseReleased(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		_mouseListener.mouseReleased(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		assertEquals(1, _receiver.getKeyOnCount(48));
+	}
+
+	@Test
+	void testKeys () {
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH, 0));
+		assertTrue(_receiver.isKeyOn(49));
+		_mouseListener.mouseReleased(makeMouseEvent(Piano.WHITE_KEY_WIDTH, 0));
+		assertFalse(_receiver.isKeyOn(49));
+
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH*2, 0));
+		assertTrue(_receiver.isKeyOn(51));
+		_mouseListener.mouseReleased(makeMouseEvent(Piano.WHITE_KEY_WIDTH*2, 0));
+		assertFalse(_receiver.isKeyOn(51));
+
+		_mouseListener.mousePressed(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		assertTrue(_receiver.isKeyOn(48));
+		_mouseListener.mouseReleased(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		assertFalse(_receiver.isKeyOn(48));
+
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH*5+3, Piano.BLACK_KEY_HEIGHT));
+		assertTrue(_receiver.isKeyOn(57));
+		_mouseListener.mouseReleased(makeMouseEvent(Piano.WHITE_KEY_WIDTH*5+3, Piano.BLACK_KEY_HEIGHT));
+		assertFalse(_receiver.isKeyOn(57));
+
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH*20+1, Piano.BLACK_KEY_HEIGHT));
+		assertTrue(_receiver.isKeyOn(83));
+		_mouseListener.mouseReleased(makeMouseEvent(Piano.WHITE_KEY_WIDTH*20+1, Piano.BLACK_KEY_HEIGHT));
+		assertFalse(_receiver.isKeyOn(83));
+	}
+
+	@Test
+	void testMultipleOn () {
+		_mouseListener.mousePressed(makeMouseEvent(0, Piano.BLACK_KEY_HEIGHT));
+		_mouseListener.mousePressed(makeMouseEvent(Piano.WHITE_KEY_WIDTH*7, Piano.BLACK_KEY_HEIGHT));
+		assertFalse(_receiver.isKeyOn(48));
+		assertTrue(_receiver.isKeyOn(60));
+	}
+
 }
