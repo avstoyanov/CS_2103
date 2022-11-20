@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="lab2 complete">
+    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="added project 2">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CS_2103.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS_2103.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2" beforeDir="false" afterPath="$PROJECT_DIR$/Project2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +51,20 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Project1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project2/resources" />
       <recent name="$PROJECT_DIR$/Project2" />
       <recent name="$PROJECT_DIR$/Project2/IMDB_data" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Application.IMDBGraphImpl">
-    <configuration name="Band" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Band" />
-      <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Email" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Email" />
-      <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IMDBGraphImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IMDBGraphImpl" />
       <module name="CS_2103" />
@@ -80,21 +72,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PianoTester.testBottomEdge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphSearchEngineTester.testShortestPath2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS_2103" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PianoTester" />
-      <option name="METHOD_NAME" value="testBottomEdge" />
+      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
+      <option name="METHOD_NAME" value="testShortestPath2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PianoTester.testRightEdge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphSearchEngineTester.testShortestPath3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS_2103" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PianoTester" />
-      <option name="METHOD_NAME" value="testRightEdge" />
+      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
+      <option name="METHOD_NAME" value="testShortestPath3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphSearchEngineTester.testShortestPath4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS_2103" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
+      <option name="METHOD_NAME" value="testShortestPath4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphSearchEngineTester.testShortestPath5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS_2103" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
+      <option name="METHOD_NAME" value="testShortestPath5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,10 +115,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.IMDBGraphImpl" />
-        <item itemvalue="Application.Email" />
-        <item itemvalue="Application.Band" />
-        <item itemvalue="JUnit.PianoTester.testBottomEdge" />
-        <item itemvalue="JUnit.PianoTester.testRightEdge" />
+        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath5" />
+        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath4" />
+        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath3" />
+        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath2" />
       </list>
     </recent_temporary>
   </component>
@@ -203,8 +215,18 @@
       <option name="project" value="LOCAL" />
       <updated>1667623601929</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added project 2">
+      <created>1668207550571</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668207550571</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.tsv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -261,7 +283,8 @@
     <MESSAGE value="finished all project 1 requirements" />
     <MESSAGE value="project 1 finished" />
     <MESSAGE value="lab2 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab2 complete" />
+    <MESSAGE value="added project 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added project 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
