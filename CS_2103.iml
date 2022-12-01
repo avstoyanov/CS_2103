@@ -10,11 +10,13 @@
       <sourceFolder url="file://$MODULE_DIR$/Project2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/homework" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Project3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Project4" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Project2/IMDB_data" />
       <excludeFolder url="file://$MODULE_DIR$/excluded_resources" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="junit.jupiter.api" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
