@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="Project3 directory set up">
+    <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="Project3 finished">
+      <change afterPath="$PROJECT_DIR$/Project4/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3" beforeDir="false" afterPath="$PROJECT_DIR$/Project3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -65,7 +66,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParticleSimulator">
+  <component name="RunManager" selected="Application.JavaFX">
+    <configuration name="Band" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Band" />
+      <module name="CS_2103" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IMDBGraphImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IMDBGraphImpl" />
       <module name="CS_2103" />
@@ -76,16 +84,6 @@
     <configuration name="ParticleSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ParticleSimulator" />
       <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GraphSearchEngineTester.testShortestPath4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS_2103" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
-      <option name="METHOD_NAME" value="testShortestPath4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,13 +108,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.JavaFX" />
+      <item itemvalue="Application.Band" />
+      <item itemvalue="Application.IMDBGraphImpl" />
+      <item itemvalue="Application.ParticleSimulator" />
+      <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath5" />
+      <item itemvalue="JUnit.HeapTester.testShuffled" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Band" />
         <item itemvalue="Application.ParticleSimulator" />
         <item itemvalue="JUnit.HeapTester.testShuffled" />
         <item itemvalue="Application.IMDBGraphImpl" />
         <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath5" />
-        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath4" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668923928111</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Project3 finished">
+      <created>1669877630554</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669877630554</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -306,7 +319,8 @@
     <MESSAGE value="Project2 finished" />
     <MESSAGE value="Project3 added" />
     <MESSAGE value="Project3 directory set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project3 directory set up" />
+    <MESSAGE value="Project3 finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project3 finished" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

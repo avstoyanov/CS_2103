@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JavaFX" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="HelloFX" />
+    <module name="CS_2103" />
+    <option name="VM_PARAMETERS" value="    --module-path $USER_HOME$/Downloads/java/javafx-sdk-19/lib/    --add-modules=javafx.controls,javafx.fxml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
