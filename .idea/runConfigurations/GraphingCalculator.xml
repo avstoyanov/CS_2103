@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="JavaFX" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="HelloFX" />
+  <configuration default="false" name="GraphingCalculator" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="GraphingCalculator" />
     <module name="CS_2103" />
     <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/java/javafx-sdk-19/lib/ --add-modules=javafx.controls,javafx.fxml" />
     <method v="2">

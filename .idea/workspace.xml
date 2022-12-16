@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7860088-365f-4af7-b9a4-58ec3a395b50" name="Changes" comment="Project4 set up">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/GraphingCalculator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/RandomTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/JavaFX.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/JavaFX.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS_2103.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS_2103.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3" beforeDir="false" afterPath="$PROJECT_DIR$/Project3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project4" beforeDir="false" afterPath="$PROJECT_DIR$/Project4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,23 +40,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/alex/Downloads/java/javafx-sdk-19/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.updates"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/Downloads/java/javafx-sdk-19/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.updates&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -65,43 +72,51 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaFX">
-    <configuration name="Band" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Band" />
-      <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IMDBGraphImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IMDBGraphImpl" />
-      <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParticleSimulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ParticleSimulator" />
-      <module name="CS_2103" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GraphSearchEngineTester.testShortestPath5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.GraphingCalculator">
+    <configuration name="ExpressionParserTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS_2103" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GraphSearchEngineTester" />
-      <option name="METHOD_NAME" value="testShortestPath5" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionParserTester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpressionParserTester.testEvaluate1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS_2103" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionParserTester" />
+      <option name="METHOD_NAME" value="testEvaluate1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapTester.testShuffled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpressionParserTester.testException1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS_2103" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HeapTester" />
-      <option name="METHOD_NAME" value="testShuffled" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionParserTester" />
+      <option name="METHOD_NAME" value="testException1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpressionParserTester.testException2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS_2103" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionParserTester" />
+      <option name="METHOD_NAME" value="testException2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpressionParserTester.testException3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS_2103" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionParserTester" />
+      <option name="METHOD_NAME" value="testException3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,19 +124,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.JavaFX" />
-      <item itemvalue="Application.Band" />
-      <item itemvalue="Application.IMDBGraphImpl" />
-      <item itemvalue="Application.ParticleSimulator" />
-      <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath5" />
-      <item itemvalue="JUnit.HeapTester.testShuffled" />
+      <item itemvalue="Application.GraphingCalculator" />
+      <item itemvalue="JUnit.ExpressionParserTester" />
+      <item itemvalue="JUnit.ExpressionParserTester.testEvaluate1" />
+      <item itemvalue="JUnit.ExpressionParserTester.testException1" />
+      <item itemvalue="JUnit.ExpressionParserTester.testException2" />
+      <item itemvalue="JUnit.ExpressionParserTester.testException3" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Band" />
-        <item itemvalue="Application.ParticleSimulator" />
-        <item itemvalue="JUnit.HeapTester.testShuffled" />
-        <item itemvalue="Application.IMDBGraphImpl" />
-        <item itemvalue="JUnit.GraphSearchEngineTester.testShortestPath5" />
+        <item itemvalue="JUnit.ExpressionParserTester" />
+        <item itemvalue="JUnit.ExpressionParserTester.testEvaluate1" />
+        <item itemvalue="JUnit.ExpressionParserTester.testException3" />
+        <item itemvalue="JUnit.ExpressionParserTester.testException2" />
+        <item itemvalue="JUnit.ExpressionParserTester.testException1" />
       </list>
     </recent_temporary>
   </component>
